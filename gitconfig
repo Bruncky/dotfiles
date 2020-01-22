@@ -14,14 +14,16 @@
 	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
 
 [alias]
-  co = checkout
-  st = status -sb
-  br = branch
-  ci = commit
-  fo = fetch origin
-  d = !git --no-pager diff
-  dt  = difftool
-  stat = !git --no-pager diff --stat
+  co = 'checkout'
+  st = 'status -sb'
+  br = 'branch'
+  cm = 'commit -m'
+  fo = 'fetch origin'
+  d = '!git --no-pager diff'
+  dt  = 'difftool'
+  stat = '!git --no-pager diff --stat'
+  pom = 'git push origin master'
+  lw = 'pull upstream master -X ours'
 
   # Clean merged branches
   sweep = !git branch --merged master | grep -v 'master$' | xargs git branch -d && git remote prune origin
