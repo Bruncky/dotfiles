@@ -57,3 +57,20 @@ POWERLEVEL9K_MODE="awesome-patched"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# NORMAL ALIASES
+alias glw='git pull upstream master -X ours'
+alias gcm='git commit -m'
+alias gacm='git add . && git commit -m'
+alias gpom='git push origin master'
+alias gnlog='git log --oneline --all --graph --decorate'
+alias gstt='clear && gst'
+
+# HEROKU
+alias gphm='git push heroku master'
+alias hr='heroku run'
+
+# PARAMETIZED ALIASES
+gacpom() {
+  git add . && git commit -m $1 && git push origin master
+}

@@ -16,7 +16,6 @@
 [alias]
   g  = git
   p  = pull
-  om = origin master
   all = add .
   co = checkout
   st = status -sb
@@ -27,9 +26,10 @@
   dt  = 'difftool'
   stat = '!git --no-pager diff --stat'
   pom = push origin master
-  ac  = add . && commit -m
+  acm  = add . && git commit -m
   acpom = add . && commit -m && push origin master
   lw = pull upstream master -X ours
+  nlog = log --oneline --all --graph --decorate
 
   # Clean merged branches
   sweep = !git branch --merged master | grep -v 'master$' | xargs git branch -d && git remote prune origin
