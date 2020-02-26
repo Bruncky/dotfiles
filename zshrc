@@ -60,15 +60,22 @@ POWERLEVEL9K_MODE="awesome-patched"
 
 # NORMAL ALIASES
 alias glw='git pull upstream master -X ours'
+alias gpum='git pull origin master'
 alias gcm='git commit -m'
 alias gacm='git add . && git commit -m'
+alias gpo='git push origin'
 alias gpom='git push origin master'
 alias gnlog='git log --oneline --all --graph --decorate'
 alias gstt='clear && gst'
+alias gcob='git checkout -b'
+alias gba='git branch -a'
+alias prep='bundle install && yarn install && rails db:drop db:create db:migrate db:seed'
+
 
 # HEROKU
 alias gphm='git push heroku master'
 alias hr='heroku run'
+alias hreset='heroku pg:reset DATABASE'
 
 # PARAMETIZED ALIASES
 gacpom() {
