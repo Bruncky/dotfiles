@@ -70,6 +70,7 @@ alias gstt='clear && gst'
 alias gcob='git checkout -b'
 alias gba='git branch -a'
 alias prep='bundle install && yarn install && rails db:drop db:create db:migrate db:seed'
+alias gtrack='git checkout --track'
 
 
 # HEROKU
@@ -81,3 +82,5 @@ alias hreset='heroku pg:reset DATABASE'
 gacpom() {
   git add . && git commit -m $1 && git push origin master
 }
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
