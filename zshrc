@@ -71,6 +71,7 @@ alias gcob='git checkout -b'
 alias gba='git branch -a'
 alias prep='bundle install && yarn install && rails db:drop db:create db:migrate db:seed'
 alias gtrack='git checkout --track'
+alias gsweep='git sweep'
 
 
 # HEROKU
@@ -84,3 +85,6 @@ gacpom() {
 }
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Ionic
+alias ibuild='ionic build && npx cap sync && npx cap open ios'
